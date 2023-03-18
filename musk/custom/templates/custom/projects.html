@@ -1,0 +1,50 @@
+{% extends './base.html' %}
+{% load static %}
+{% block titleBlock %} {{ user.username }} Projects {% endblock titleBlock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/Project_feed.css' %}">
+<div>
+    <div class="project-list-header">
+        <h2>Project List</h2>
+    </div>
+    <div>
+        <h3>Text AI Projects</h3>
+    </div>
+    <div class="project-list">
+        {% for project in projects %} <!-- List all the projects -->
+            {% if project.creator == user %} <!-- Filters the projects according to the user -->
+                {% if project.projectType == "Text" %} <!-- List the projects which are created through Text based A.I -->
+                    <div class="project-item">
+                        <div>
+                            <img class="project-image" title="Amsterdam" alt="Amsterdam-hd" src="{% static 'images/v27_125.png' %}">
+                        </div>
+                        <div>
+                            <h2 class="project-name"><a href="{% url 'custom_text_input' pk=project.id %}">{{ project.name }}</a></h2>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+    <div>
+        <h3>Image AI Projects</h3>
+    </div>
+    <div class="project-list">
+        {% for project in projects %} <!-- List all the projects -->
+            {% if project.creator == user %} <!-- Filters the projects according to the user -->
+                {% if project.projectType == "Image" %} <!-- List the projects which are created through Image based A.I -->
+                    <div class="project-item">
+                        <div>
+                            <img class="project-image" title="Amsterdam" alt="Amsterdam-hd" src="{% static 'images/v27_125.png' %}">
+                        </div>
+                        <div>
+                            <h2 class="project-name"><a href="{% url 'custom_image_input' pk=project.id %}">{{ project.name }}</a></h2>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock content %}

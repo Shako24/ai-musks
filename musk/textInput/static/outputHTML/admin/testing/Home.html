@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1 {
+	 text-align: center;
+}
+footer {
+	 width: 100%;
+	 background-color: white;
+	 border: 5px solid black;
+	 cursor: pointer;
+	 display: flex;
+	 justify-content: center;
+	 font-weight: bolder;
+	 font-size: 2em;
+}
+.topnav { 
+	 width: 100%;
+	 background-color: black;
+	 overflow: hidden;
+}
+.topnav a {
+	 float: left;
+	 color: white;
+	 text-align: center;
+	 padding: 14px ;
+	 text-decoration: none;
+	 font-size: 17px;
+}
+.topnav a:hover {
+	 background-color: grey;
+	 color: red;
+}
+.topnav a.active {
+	 background-color: blue;
+	 color: green;
+}
+select {
+	 background-color: white;
+	 border: 5px solid black;
+	 cursor: pointer;
+}
+button {
+
+        background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+	 background-color: white;
+	 border: 2px solid black;
+	 font-size: 1empx;
+}button:hover {
+  background-color: #1e293b;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  button {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+}label {
+	 text-align: center;
+}
+.flex-container2 {
+	 display: flex;
+	 background-color: white;
+	 width: auto;
+	 align-items: center;
+	 justify-content: center;
+}
+input[type=text] {
+
+    margin-bottom: 1.5rem;
+	position: relative;
+	border: none;
+	border-bottom: 0.125rem solid rgba(19, 19, 21, 0.6);
+	height: 2rem;
+	font-size: 1.0625rem;
+	padding-left: 0.875rem;
+	line-height: 147.6%;
+	padding-top: 0.825rem;
+	padding-bottom: 0.5rem;
+	 background-color: white;
+	 border: 0px solid none;
+	 cursor: text;
+}
+input[type=text]:focus {
+	outline: none;
+}
+input[type=text]:hover {
+	background: rgba(73, 133, 224, 0.12);
+	border-color: #121212;
+	
+}textarea {
+
+    margin: 1.5rem;
+	position: relative;
+	border: none;
+	border: 0.125rem solid rgba(19, 19, 21, 0.6);
+	height: 2rem;
+	font-size: 1.0625rem;
+	padding-left: 0.875rem;
+	line-height: 147.6%;
+	padding-top: 0.825rem;
+	padding-bottom: 0.5rem;
+	 background-color: white;
+	 border: 3px solid none;
+	 cursor: text;
+}
+textarea:focus {
+	outline: none;
+}
+textarea:hover {
+	background: rgba(73, 133, 224, 0.12);
+	border-color: #121212;
+}img {
+	 width: 100%;
+	 background-color: white;
+	 border: 5px solid black;
+}
+a {
+}
+p {
+	 text-align: center;
+	 background-color: white;
+	 border: 3px solid black;
+border-radius: 5px;}
+.flex-container {
+	 display: flex;
+	 background-color: white;
+	 width: auto;
+	 align-items: center;
+	 justify-content: center;
+}
+.flex-container > div {
+	 background-color: white;
+	 margin: 10px;
+	 padding: 20px;
+	 width: auto; 
+	background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;
+}
+div{
+	 text-align: center;
+	 background-color: white;
+	background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;
+}
+.flex-container1 {
+	 display: flex;
+	 background-color: white;
+	 width: auto;
+	 align-items: center;
+	 justify-content: center;
+	background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;
+}
+.flex-container1 > div {
+	 background-color: white;
+	 margin: 10px;
+	 padding: 20px;
+	 width: auto;
+	background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;
+}
+body {
+	 background: radial-gradient(circle at 52.1% -29.6%, rgb(144, 17, 105) 0%, rgb(51, 0, 131) 100.2%);;
+}</style>
+<body>
+<h1 id="elem1">Header</h1><br>
+<div class="flex-container" style="url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><p id="elem9" >This is the paragrapgh about the detail of this page of the website</p></div></div>
+<h1 id="elem2">Header</h1><br>
+<div><label id="elemelem0" for="Lorem Ipsum">Label</label><br>
+<textarea id="elem14" name="text area" rows="4" cols="50" placeholder="Place Your text Here"></textarea><br>
+<label id="elemelem1" for="Lorem Ipsum">Label</label><br>
+<textarea id="elem13" name="text area" rows="4" cols="50" placeholder="Place Your text Here"></textarea><br>
+<label id="elemelem2" for="Lorem Ipsum">Label</label><br>
+<input id="elem12" type="text" name="text box" placeholder="Place Your text Here"><br>
+<label id="elemelem3" for="Lorem Ipsum">Label</label><br>
+<input id="elem11" type="text" name="text box" placeholder="Place Your text Here"><br>
+<div class="flex-container1" style="url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elem6"><input type="checkbox">CheckBox</label></div><div><label id="elem7"><input type="checkbox">CheckBox</label></div></div><br>
+<div class="flex-container1" style="url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><button class="button" id="elem3">Button</button></div><div><button class="button" id="elem4">Button</button></div><div><button class="button" id="elem5">Button</button></div></div><br></div><br>
+<div class="flex-container" style="url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><p id="elem10" >This is the paragrapgh about the detail of this page of the website</p></div></div><br>
+<footer id="elem8">Footer</footer></body>
+</html>

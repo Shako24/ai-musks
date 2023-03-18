@@ -1,0 +1,10 @@
+Django
+django-allauth
+djangorestframework
+dj-rest-auth
+django-crispy-forms
+django-cors-headers
+django-cleanup
+Pillow
+airium
+nbformat

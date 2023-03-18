@@ -1,0 +1,74 @@
+{% extends './base.html' %}
+{% load static %}
+{% block titleBlock %} New Project {% endblock titleBlock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static '/css/Purpose.css' %}">
+
+<div class="Background_purpose">
+    <div class="purpose_box">
+        <form method="post" action="{% url 'custom_purpose' %}" >
+            {% csrf_token %}
+            <!-- Input field for the Website Name -->
+            <div class="purpose_field_row">
+                <label class="purpose_header" for="projectName">Name of the website</label>
+                <input id="projectName" type="text" name="projectName" placeholder="Website Name"  />
+            </div>
+            <!-- Purpose of the Website -->
+            <div class="purpose_field_row">
+                <label for="purpose" class="purpose_header">What is the purpose of the website: </label>
+                <select name="purpose" id="purpose" required >
+                    <option value="Corporate"  label="Corporate"></option>
+                    <option value="E-Commerce"  label="E-Commerce"></option>
+                    <option value="Blog"  label="Blog"></option>
+                    <option value="Portfolio"  label="Portfolio"></option>
+                    <option value="Wiki"  label="Wiki"></option>
+                </select>
+            </div>
+            <!-- Checkboxes for the pages that user wants -->
+            <div class="purpose_field_column">
+                <label class="purpose_header">How many pages do you want</label>
+                <div style="display: flex; flex-direction: row;">
+                    <input type="checkbox" id="Home" name="Home" value="Home" /><label class="page_option" for="Home">Home</label>
+                    <input type="checkbox" id="About" name="About" value="About" /><label class="page_option" for="About">About</label>
+                    <input type="checkbox" id="Contact" name="Contact" value="Contact" /><label class="page_option" for="Contact">Contact</label>
+                    <input type="checkbox" id="Custom" name="Custom" value="Custom" /><label class="page_option" for="Custom">Custom</label>
+                </div>
+                <!-- Input field for name of the custom page (currently hidden only shown when custom checkbox is selected) -->
+                <div id="customPageDiv" style="visibility: hidden;">
+                    <input
+                        id="customName"
+                        name="customPageName"
+                        type="text"
+                        placeholder="Title of the Custom page"
+                        value=""
+                    />
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-evenly; column-gap: 20px;">
+                <!-- Text Input button -->
+                <button class="choice_button" type="submit" name="textInputSubmit">
+                    Text Input
+                </button>
+                <!-- Image Input button -->
+                <button class="choice_button" type="submit" name="imageInputSubmit">
+                    Image Input
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    const checkbox = document.getElementById('Custom');
+    const box = document.getElementById('customPageDiv');
+    checkbox.addEventListener('click', function handleClick() {
+    if (checkbox.checked) {
+        box.style.visibility = 'visible';
+    } else {
+        box.style.visibility = 'hidden';
+    }
+    });
+</script>
+
+{% endblock content %}

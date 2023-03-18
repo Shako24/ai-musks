@@ -1,0 +1,8 @@
+Button,178,1
+CheckBox,178,1
+CheckBox,335,1
+Button,483,1
+CheckBox,630,1
+BREAK
+Button,257,2
+Button,602,2

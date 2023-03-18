@@ -1,0 +1,41 @@
+{% extends './base.html' %}
+{% load static %}
+{% block titleBlock %} AI Musks {% endblock titleBlock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/Signup.css' %}">
+<div class="Background">
+    <div>
+        <img src="/static/images/v18_24.png" alt="right background" id="image1">
+    </div>
+    <div class="Login_Box">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <!-- Login Form -->
+        <div class="login">
+            <form method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
+                <label for="chk" aria-hidden="true" class="label_account">Login</label>
+                {{ loginForm.login }}
+                <label for="chk" style="display: none; justify-content: center; color: red;">Wrong email entered</label>
+                {{ loginForm.password }}
+                <label for="chk" style="display: none; justify-content: center; color: red;">Wrong password entered</label>
+                <button class="primaryAction button_account" type="submit">Login</button>
+            </form>
+        </div>
+        <!-- Signup Form -->
+        <div class="signup">
+            <form id="signup_form" method="POST" action="{% url 'account_signup' %}">
+                {% csrf_token %}
+                <label for="chk" aria-hidden="true" class="label_account">Sign up</label>
+                {{ signupForm.username }}
+                {{ signupForm.email }}
+                {{ signupForm.password1 }}
+                {{ signupForm.password2 }}
+                <button class="primaryAction button_account" type="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

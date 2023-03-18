@@ -1,0 +1,78 @@
+.project-page-list-header {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.678);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    font-family: 'Times New Roman';
+	margin-bottom: 10px;
+}
+
+span {
+    color: white;
+    font-size: 1em;
+    font-weight: bolder;
+    font-family:'Courier New', Courier, monospace ;
+    margin-top: 5px;
+}
+
+input, select {
+    /* width: 60%; */
+	height: 35px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	/* margin: 20px auto;
+	padding: 10px; */
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.button_customize {
+	width: 200px;
+	height: 40px;
+	margin-bottom: 20px;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #8a3b3b;
+	font-size: 1em;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+.button_customize:hover {
+    background: #b84444;
+}
+
+option {
+    display: block;
+    justify-content: center;
+}
+
+
+.form_div {
+    display: block;
+    margin: 30px;
+    border-radius: 15px;
+    background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+    height: 60%;
+	box-shadow: 5px 20px 50px #000;
+}
+
+.form_itm {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 30px;
+    margin-left: 50px;
+    margin-top: 30px;
+}

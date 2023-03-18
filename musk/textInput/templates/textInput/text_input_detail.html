@@ -1,0 +1,344 @@
+<!-- References
+* https://speckyboy.com/custom-file-upload-fields/
+-->
+
+{% extends 'custom/base.html' %}
+{% load static %}
+{% block titleBlock %} Create Page {% endblock titleBlock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/text_input_detail.css' %}">
+
+<div style="height: 100%; overflow: scroll;">
+    <h1 style="text-align: center; font-family: 'Times New Roman'; font-weight: bold;">{{ page.parent.name }} - {{ page.pageName }} Page</h1>
+    <form method="post" action="{% url 'custom_text_input_detail' parent=page.parent.id pk=page.id %}">
+        {% csrf_token %}
+        <div style="display: flex; flex-direction: column; margin-left: 3%; justify-content: space-evenly; height: auto;">
+            <div id="reset_button_div" style="display: flex; justify-content: space-between; margin-top: 10px; margin-right: 500px;"><button id="reset_button" class="re_make_button" type="button" onclick="CounterReset();">Reset</button></div>
+            <div class="choices">
+                <div class="choice">
+                    <label>
+                        {% if page.heading == 0 %}
+                            <input id="HeadingCheckbox" class="checkBox" type="checkbox" value="1" />
+                        {% else %}
+                            <input id="HeadingCheckbox" class="checkBox" type="checkbox" value="1" checked/>
+                        {% endif %}
+                        <span for="HeadingCheckbox">Heading</span>
+                    </label>
+                </div>
+                {% if page.heading == 0 %}
+                    <div id="HeadingDiv" class="counterDiv">
+                {% else %}
+                    <div id="HeadingDiv" class="counterDiv" style="visibility: visible;">
+                {% endif %}
+                    <div class="counterInnerDiv">
+                        <button type="button" id="HeadingMinus" onclick="CounterDecrement(0)" class="counterButton">
+                            -
+                        </button>
+                        <input id="HeadingTextbox" name="HeadingTextbox" class="counterTextbox" type="text" value="{{ page.heading }}">
+                        <button type="button" id="HeadingPlus" onclick="CounterIncrement(0)" class="counterButton">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <label>
+                        {% if page.checkbox == 0 %}
+                            <input id="CheckboxCheckbox" class="checkBox" type="checkbox" value="1" />
+                        {% else %}
+                            <input id="CheckboxCheckbox" class="checkBox" type="checkbox" value="1" checked/>
+                        {% endif %}
+                        <span>Checkbox</span>
+                    </label>
+                </div>
+                {% if page.checkbox == 0 %}
+                    <div id="CheckboxDiv" class="counterDiv">
+                {% else %}
+                    <div id="CheckboxDiv" class="counterDiv" style="visibility: visible;">
+                {% endif %}
+                    <div class="counterInnerDiv">
+                        <button type="button" id="CheckboxMinus" class="counterButton" onclick="CounterDecrement(1)">
+                            -
+                        </button>
+                        <input id="CheckboxTextbox" name="CheckboxTextbox" type="text" value="{{ page.checkbox }}" class="counterTextbox">
+                        <button type="button" id="CheckboxPlus" class="counterButton" onclick="CounterIncrement(1)">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <label>
+                        {% if page.navbar == 0 %}
+                            <input id="NavbarCheckbox" name="NavbarCheckbox" class="checkBox" type="checkbox"/>
+                        {% else %}
+                            <input id="NavbarCheckbox" name="NavbarCheckbox" class="checkBox" type="checkbox" checked/>
+                        {% endif %}
+                        <span>Navigation Bar</span>
+                    </label>
+                </div>
+                {% if page.navbar == 0 %}
+                    <div id="NavbarDiv" class="counterDiv">
+                {% else %}
+                    <div id="NavbarDiv" class="counterDiv" style="visibility: visible;">
+                {% endif %}
+                    <div class="counterInnerDiv">
+                        <span class="counterSpan">Allowed only 1</span>
+                        <input id="NavbarTextbox" name="NavbarTextbox" type="text" value="1" class="counterTextbox" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <label>
+                        {% if page.dropdown == 0 %}
+                            <input id="DropdownCheckbox" class="checkBox" type="checkbox" value="1" />
+                        {% else %}
+                            <input id="DropdownCheckbox" class="checkBox" type="checkbox" value="1" checked/>
+                        {% endif %}
+                        <span>Dropdown</span>
+                    </label>
+                </div>
+                {% if page.dropdown == 0 %}
+                    <div id="DropdownDiv" class="counterDiv">
+                {% else %}
+                    <div id="DropdownDiv" class="counterDiv" style="visibility: visible;">
+                {% endif %}
+                    <div class="counterInnerDiv">
+                        <button type="button" id="DropdownMinus" class="counterButton" onclick="CounterDecrement(3)">
+                            -
+                        </button>
+                        <input id="DropdownTextbox" name="DropdownTextbox" type="text" value="{{ page.dropdown }}" class="counterTextbox">
+                        <button type="button" id="DropdownPlus" class="counterButton" onclick="CounterIncrement(3)">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <label>
+                        {% if page.textbox == 0 %}
+                            <input id="TextboxCheckbox" class="checkBox" type="checkbox" value="1" />
+                        {% else %}
+                            <input id="TextboxCheckbox" class="checkBox" type="checkbox" value="1" checked/>
+                        {% endif %}
+                        <span>Textbox</span>
+                    </label>
+                </div>
+                {% if page.textbox == 0 %}
+                    <div id="TextboxDiv" class="counterDiv">
+                {% else %}
+                    <div id="TextboxDiv" class="counterDiv" style="visibility: visible;">
+                {% endif %}
+                    <div class="counterInnerDiv">
+                        <button type="button" id="TextboxMinus" class="counterButton" onclick="CounterDecrement(4)">
+                            -
+                        </button>
+                        <input id="TextboxTextbox" name="TextboxTextbox" type="text" value="{{ page.textbox }}" class="counterTextbox">
+                        <button type="button" id="TextboxPlus" class="counterButton" onclick="CounterIncrement(4)">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <label>
+                        {% if page.footer == 0 %}
+                            <input id="FooterCheckbox" name="FooterCheckbox" class="checkBox" type="checkbox"/>
+                        {% else %}
+                            <input id="FooterCheckbox" name="FooterCheckbox" class="checkBox" type="checkbox" checked/>
+                        {% endif %}
+                        <span>Footer</span>
+                    </label>
+                </div>
+                {% if page.footer == 0 %}
+                    <div id="FooterDiv" class="counterDiv">
+                {% else %}
+                    <div id="FooterDiv" class="counterDiv" style="visibility: visible;">
+                {% endif %}
+                    <div class="counterInnerDiv">
+                        <span class="counterSpan">Allowed only 1</span>
+                        <input id="FooterTextbox" name="FooterTextbox" type="text" value="1" class="counterTextbox" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <label>
+                        {% if page.paragraph == 0 %}
+                            <input id="ParagraphCheckbox" class="checkBox" type="checkbox" value="1" />
+                        {% else %}
+                            <input id="ParagraphCheckbox" class="checkBox" type="checkbox" value="1" checked/>
+                        {% endif %}
+                        <span>Paragraph</span>
+                    </label>
+                </div>
+                {% if page.paragraph == 0 %}
+                    <div id="ParagraphDiv" class="counterDiv">
+                {% else %}
+                    <div id="ParagraphDiv" class="counterDiv" style="visibility: visible;">
+                {% endif %}
+                    <div class="counterInnerDiv">
+                        <button type="button" id="ParagraphMinus" class="counterButton" onclick="CounterDecrement(6)">
+                            -
+                        </button>
+                        <input id="ParagraphTextbox" name="ParagraphTextbox" type="text" value="{{ page.paragraph }}" class="counterTextbox">
+                        <button type="button" id="ParagraphPlus" class="counterButton" onclick="CounterIncrement(6)">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <label>
+                        {% if page.label == 0 %}
+                        <input id="LabelCheckbox" class="checkBox" type="checkbox" value="1" />
+                        {% else %}
+                            <input id="LabelCheckbox" class="checkBox" type="checkbox" value="1" checked/>
+                        {% endif %}
+                        <span>Label</span>
+                    </label>
+                </div>
+                {% if page.label == 0 %}
+                    <div id="LabelDiv" class="counterDiv">
+                {% else %}
+                    <div id="LabelDiv" class="counterDiv" style="visibility: visible;">
+                {% endif %}
+                    <div class="counterInnerDiv">
+                        <button type="button" id="LabelMinus" class="counterButton" onclick="CounterDecrement(7)">
+                            -
+                        </button>
+                        <input id="LabelTextbox" name="LabelTextbox" type="text" value="{{ page.label }}" class="counterTextbox">
+                        <button type="button" id="LabelPlus" class="counterButton" onclick="CounterIncrement(7)">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <label>
+                        {% if page.image == 0 %}
+                            <input id="ImageCheckbox" class="checkBox" type="checkbox" value="1" />
+                        {% else %}
+                            <input id="ImageCheckbox" class="checkBox" type="checkbox" value="1" checked/>
+                        {% endif %}
+                        <span>Image</span>
+                    </label>
+                </div>
+                {% if page.image == 0 %}
+                    <div id="ImageDiv" class="counterDiv">
+                {% else %}
+                    <div id="ImageDiv" class="counterDiv" style="visibility: visible;">
+                {% endif %}
+                    <div class="counterInnerDiv">
+                        <button type="button" id="ImageMinus" class="counterButton" onclick="CounterDecrement(8)">
+                            -
+                        </button>
+                        <input id="ImageTextbox" name="ImageTextbox" type="text" value="{{ page.image }}" class="counterTextbox">
+                        <button type="button" id="ImagePlus" class="counterButton" onclick="CounterIncrement(8)">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <label>
+                        {% if page.textarea == 0 %}
+                            <input id="TextareaCheckbox" class="checkBox" type="checkbox" value="1" />
+                        {% else %}
+                            <input id="TextareaCheckbox" class="checkBox" type="checkbox" value="1" checked/>
+                        {% endif %}
+                        <span>Text Area</span>
+                    </label>
+                </div>
+                {% if page.textarea == 0 %}
+                    <div id="TextareaDiv" class="counterDiv">
+                {% else %}
+                    <div id="TextareaDiv" class="counterDiv" style="visibility: visible;">
+                {% endif %}
+                    <div class="counterInnerDiv">
+                        <button type="button" id="TextareaMinus" class="counterButton" onclick="CounterDecrement(9)">
+                            -
+                        </button>
+                        <input id="TextareaTextbox" name="TextareaTextbox" type="text" value="{{ page.textarea }}" class="counterTextbox">
+                        <button type="button" id="TextareaPlus" class="counterButton" onclick="CounterIncrement(9)">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <label>
+                        {% if page.button == 0 %}
+                            <input id="ButtonCheckbox" class="checkBox" type="checkbox" value="1" />
+                        {% else %}
+                            <input id="ButtonCheckbox" class="checkBox" type="checkbox" value="1" checked/>
+                        {% endif %}
+                        <span>Button</span>
+                    </label>
+                </div>
+                {% if page.button == 0 %}
+                    <div id="ButtonDiv" class="counterDiv">
+                {% else %}
+                    <div id="ButtonDiv" class="counterDiv" style="visibility: visible;">
+                {% endif %}
+                    <div class="counterInnerDiv">
+                        <button type="button" id="ButtonMinus" class="counterButton" onclick="CounterDecrement(10)">
+                            -
+                        </button>
+                        <input id="ButtonTextbox" name="ButtonTextbox" type="text" value="{{ page.button }}" class="counterTextbox">
+                        <button type="button" id="ButtonPlus" class="counterButton" onclick="CounterIncrement(10)">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="choices">
+                <div class="choice">
+                    <label>
+                        {% if page.link == 0 %}
+                            <input id="LinkCheckbox" class="checkBox" type="checkbox" value="1" />
+                        {% else %}
+                            <input id="LinkCheckbox" class="checkBox" type="checkbox" value="1" checked/>
+                        {% endif %}
+                        <span>Link</span>
+                    </label>
+                </div>
+                {% if page.link == 0 %}
+                    <div id="LinkDiv" class="counterDiv">
+                {% else %}
+                    <div id="LinkDiv" class="counterDiv" style="visibility: visible;">
+                {% endif %}
+                    <div class="counterInnerDiv">
+                        <button type="button" id="LinkMinus" class="counterButton" onclick="CounterDecrement(11)">
+                            -
+                        </button>
+                        <input id="LinkTextbox" name="LinkTextbox" type="text" value="{{ page.link }}" class="counterTextbox">
+                        <button type="button" id="LinkPlus" class="counterButton" onclick="CounterIncrement(11)">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+            <div class="colorScheme-div">
+                {% if page.made == True %}
+                    <textarea name="colorScheme" id="colorScheme" cols="50" rows="5" placeholder="Enter the color scheme for the website....." >{{ page.colorScheme }}</textarea>
+                {% else %}
+                    <textarea name="colorScheme" id="colorScheme" cols="50" rows="5" placeholder="Enter the color scheme for the website....." ></textarea>
+                {% endif %}
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 10px; margin-right: 500px;">
+                <button id="submitButton" type="submit" name="pageSubmit" class="re_make_button">Make Page</button>
+            </div>
+    </form>
+</div>
+<script src="{% static '/js/textinput_detail.js' %}" type="text/javascript"></script>
+{% endblock content %}

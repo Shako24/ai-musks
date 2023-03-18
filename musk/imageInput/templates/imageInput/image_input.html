@@ -1,0 +1,36 @@
+{% extends 'custom/base.html' %}
+{% load static %}
+{% block titleBlock %} Image Input Mode {% endblock titleBlock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/text_input.css' %}">
+<div style="display: flex; flex-direction: column; row-gap: 10px; margin-top: 30px;">
+    <div class="project-page-list-header" style="text-align: center;">
+        <h2>{{ pages.0.parent.name }}</h2>
+    </div>
+    {% for page in pages %}
+    <div class="projectPage">
+        <h1 class="projectHead1"> {{ page.pageName }} </h1>
+        <div style="display: flex; flex-direction: row;">
+            <div style="width: 60%;">
+                <h2 style="font-size: 20px; display: flex; justify-content: flex-end;"><a class="pagelink" href="{% url 'custom_image_input_detail' parent=page.parent.id pk=page.id %}"> 
+                        {{ page.parent.name }} - {{ page.pageName }} Page 
+                    </a></h2>
+            </div>
+            {% if page.made == True %}
+            <div style="width: 40%;">
+                <h2 style="font-size: 15px; margin-top: 5px; display: flex; justify-content: flex-end;"><a href="{% url 'custom_image_customization' parent=page.parent.id pk=page.id %}"> 
+                    Customize
+                </a></h2>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+    <form style="display: flex; justify-content: center;" action="{% url 'custom_image_input' pk=pages.0.parent.id %}" method="post">
+        {% csrf_token %}
+        <input class="btn btn-danger" type="submit" value="Delete Project">
+    </form>
+</div>
+
+
+{% endblock content %}

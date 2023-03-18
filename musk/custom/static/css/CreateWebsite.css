@@ -1,0 +1,29 @@
+.Background_createpage {
+    display: flex;
+    justify-content: center;
+
+}
+
+#img1 {
+    position: center;
+    width: 30%;
+    height: 300px;
+    margin-top: 150px;
+    margin-left: 400px;
+    border: 5px solid black;
+}
+
+#img2 {
+    position: center;
+    width: 30%;
+    height: 300px;
+    margin-top: 150px;
+    margin-left: 40px;
+    border: 5px solid black;
+    overflow: hidden;
+}
+
+.website_option {
+    position: absolute;
+    margin-left: 40%;
+}

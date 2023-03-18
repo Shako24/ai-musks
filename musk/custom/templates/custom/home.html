@@ -1,0 +1,32 @@
+{% extends './base.html' %}
+{% load static %}
+{% block titleBlock %} AI Musks {% endblock titleBlock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/Home.css' %}">
+<div class="Background-projectfeed">
+  <h1>Welcome to A.I based Website Builder</h1>
+  <div style="display: flex; flex-direction: row; justify-content: center; column-gap: 100px; margin-top: 50px;">
+    <div class="project">
+      <a href="{% url 'custom_purpose' %}" style="text-decoration: none; color: white;">
+        <div style="display: flex; flex-direction: column;">
+          <i class="fa fa-plus-circle" aria-hidden="true" style="font-size: 30px;"></i>
+          <span>New Project</span>
+        </div>
+        </a>
+    </div>
+    <!-- Shows the My Projects button when user is logged in  -->
+    {% if user.is_authenticated %}
+      <div class="project">
+        <a href="{% url 'custom_projects' %}" style="text-decoration: none; color: white;"><span>My projects</span></a>
+      </div>
+    <!-- Shows Login button when user is not logged in -->
+    {% else %}
+      <div class="project">
+        <a href="{% url 'custom_testLogin' %}" style="text-decoration: none; color: white;"><span>Login</span></a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock content %}

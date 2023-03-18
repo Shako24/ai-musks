@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1 {
+	 text-align: center;
+}
+footer {
+	 width: 100%;
+	 background-color: white;
+	 border: 5px solid black;
+	 cursor: pointer;
+	 display: flex;
+	 justify-content: center;
+	 font-weight: bolder;
+	 font-size: 2em;
+}
+.topnav { 
+	 width: 100%;
+	 background-color: black;
+	 overflow: hidden;
+}
+.topnav a {
+	 float: left;
+	 color: white;
+	 text-align: center;
+	 padding: 14px ;
+	 text-decoration: none;
+	 font-size: 17px;
+}
+.topnav a:hover {
+	 background-color: grey;
+	 color: red;
+}
+.topnav a.active {
+	 background-color: blue;
+	 color: green;
+}
+select {
+
+	height: 35px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	 background-color: white;
+	 cursor: pointer;
+}
+button {
+
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+	 background-color: white;
+	 border: 2px solid black;
+	 font-size: 1empx;
+}button:focus {
+  color: #171e29;
+}
+
+button:hover {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+button:active {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+@media (min-width: 768px) {
+  button {
+    min-width: 170px;
+  }
+}label {
+	 text-align: center;
+}
+.flex-container2 {
+	 display: flex;
+	 background-color: white;
+	 width: auto;
+	 align-items: center;
+	 justify-content: center;
+}
+input[type=text] {
+  padding: 12px 20px;
+    font-size: 1rem;
+    border-width: calc(5 * 1px);
+    border-style: solid;
+    border: none;
+    border-radius: calc(6 * 1px);
+    text-align: center;
+    outline: transparent;
+	 background-color: white;
+	 border: 0px solid none;
+	 cursor: text;
+}
+textarea {
+  padding: 12px 20px;
+    font-size: 1rem;
+    border-width: calc(5 * 1px);
+    border-style: solid;
+    border: none;
+    border-radius: calc(6 * 1px);
+    text-align: center;
+    outline: transparent;
+	 background-color: white;
+	 border: 3px solid none;
+	 cursor: text;
+}
+img {
+	 width: 75%;
+	 background-color: white;
+	 border: 5px solid black;
+}
+a {
+}
+p {
+	 text-align: center;
+	 background-color: white;
+border-radius: 5px;}
+.flex-container {
+	 display: flex;
+	 background-color: white;
+	 width: auto;
+	 align-items: center;
+	 justify-content: center;
+}
+.flex-container > div {
+	 background-color: white;
+	 margin: 10px;
+	 padding: 20px;
+	 width: auto; 
+	background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;
+}
+div{
+	 text-align: center;
+	 background-color: white;
+	background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;
+}
+.flex-container1 {
+	 display: flex;
+	 background-color: white;
+	 width: auto;
+	 align-items: center;
+	 justify-content: center;
+	background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;
+}
+.flex-container1 > div {
+	 background-color: white;
+	 margin: 10px;
+	 padding: 20px;
+	 width: auto;
+	background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;
+}
+body {
+	 background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);;
+}</style>
+<body>
+<div id="elem1" class="topnav">
+<a class="active" href="#Lorem Ipsum1">Lorem Ipsum1</a>
+<a href="#Lorem Ipsum2">Lorem Ipsum2</a>
+</div><br>
+<div>
+<h1 id="elem2">The Header for this section</h1><div class="flex-container" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><p id="elem14" >Lorem ipsum dolor sit amet, ea vocent deserunt postulant nec.<br> Mea id iriure probatus, sit unum clita mandamus ex.<br> Duo zril facilisi expetendis eu, in sea omnes torquatos.<br> Ne deseruisse deterruisset pri, per nostro constituam ut.<br> Est ex natum impedit, ei duo graeci deserunt.<br> Affert recusabonepro.</p></div><div><img id="elem12" src="/media/cyberpunk.jpg" alt="Your Image"></div></div>
+</div><div>
+<h1 id="elem3">The Header for this section</h1><div class="flex-container" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><p id="elem15" >Lorem ipsum dolor sit amet, ea vocent deserunt postulant nec.<br> Mea id iriure probatus, sit unum clita mandamus ex.<br> Duo zril facilisi expetendis eu, in sea omnes torquatos.<br> Ne deseruisse deterruisset pri, per nostro constituam ut.<br> Est ex natum impedit, ei duo graeci deserunt.<br> Affert recusabonepro.</p></div><div><img id="elem13" src="/media/cyberpunk.jpg" alt="Your Image"></div></div>
+</div><div>
+<h1 id="elem4">The Header for this section</h1><div class="flex-container" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><p id="elem16" >Lorem ipsum dolor sit amet, ea vocent deserunt postulant nec.<br> Mea id iriure probatus, sit unum clita mandamus ex.<br> Duo zril facilisi expetendis eu, in sea omnes torquatos.<br> Ne deseruisse deterruisset pri, per nostro constituam ut.<br> Est ex natum impedit, ei duo graeci deserunt.<br> Affert recusabonepro.</p></div></div>
+</div><div><h1 id="elemelem0">This is Your Form!!</h1><div><div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elemelem1" for="Lorem Ipsum">This is the label for your textbox:</label></div><div><input id="elem17" type="text" name="text box" placeholder="Place Your text Here"></div></div></div><div><div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elemelem2" for="Lorem Ipsum">This is the label for your textbox:</label></div><div><input id="elem18" type="text" name="text box" placeholder="Place Your text Here"></div></div></div><div><div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elemelem3" for="Lorem Ipsum">This is the label for your textarea:</label></div><div><textarea id="elem19" name="text area" rows="4" cols="50" placeholder="Place Your text Here"></textarea></div></div></div><div><div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elemelem4" for="Lorem Ipsum">This is the label for your textarea:</label></div><div><textarea id="elem20" name="text area" rows="4" cols="50" placeholder="Place Your text Here"></textarea></div></div></div><div><label id="elemelem5" for="Lorem Ipsum">This is the label for your checkboxes:</label><br>
+<div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elem8"><input type="checkbox">CheckBox</label></div><div><label id="elem9"><input type="checkbox">CheckBox</label></div><div><label id="elem10"><input type="checkbox">CheckBox</label></div></div></div>
+<div><div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><button class="button" id="elem5">Button</button></div><div><button class="button" id="elem6">Button</button></div><div><button class="button" id="elem7">Button</button></div><div></div>
+</div>
+<footer id="elem11">Footer</footer></body>
+</html>

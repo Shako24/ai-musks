@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1 {
+	 text-align: right;
+}
+footer {
+	 width: 100%;
+	 background-color: white;
+	 border: 5px solid black;
+	 cursor: pointer;
+	 display: flex;
+	 justify-content: center;
+	 font-weight: bolder;
+	 font-size: 2em;
+}
+.topnav { 
+	 width: 100%;
+	 background-color: black;
+	 overflow: hidden;
+}
+.topnav a {
+	 float: left;
+	 color: white;
+	 text-align: center;
+	 padding: 14px ;
+	 text-decoration: none;
+	 font-size: 17px;
+}
+.topnav a:hover {
+	 background-color: grey;
+	 color: red;
+}
+.topnav a.active {
+	 background-color: blue;
+	 color: green;
+}
+select {
+
+	height: 35px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	 background-color: white;
+	 cursor: pointer;
+}
+button {
+
+        border-radius: 4px;
+        border-style: none;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 0;
+        max-width: none;
+        min-height: 44px;
+        min-width: 10px;
+        outline: none;
+        overflow: hidden;
+        padding: 9px 20px 8px;
+        position: relative;
+        text-align: center;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 100%;
+        	 background-color: yellow;
+	 border: 2px solid green;
+	 font-size: 1empx;
+}button:hover,
+        button:focus {
+            opacity: .75;
+        }label {
+	 text-align: center;
+}
+.flex-container2 {
+	 display: flex;
+	 background-color: white;
+	 width: auto;
+	 align-items: center;
+	 justify-content: center;
+}
+input[type=text] {
+
+    font-family: inherit;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+	 background-color: white;
+	 border: 0px solid none;
+	 color: red;
+	 cursor: text;
+}
+
+input[type=text]::placeholder {
+    color: transparent;
+}
+input[type=text]:focus {
+    border: none;
+    border-bottom: 0.125rem solid #11998e;
+}
+textarea {
+
+    font-family: inherit;
+    border: 0;
+    border: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+	 background-color: blue;
+	 border: 3px solid none;
+	 cursor: text;
+}
+
+textarea::placeholder {
+    color: transparent;
+}
+textarea:focus {
+    border: none;
+    border: 0.125rem solid #11998e;
+}
+img {
+	 width: 75%;
+	 background-color: white;
+	 border: 5px solid red;
+}
+a {
+}
+p {
+	 text-align: center;
+	 background-color: blue;
+border-radius: 5px;}
+.flex-container {
+	 display: flex;
+	 background-color: white;
+	 width: auto;
+	 align-items: center;
+	 justify-content: center;
+}
+.flex-container > div {
+	 background-color: white;
+	 margin: 10px;
+	 padding: 20px;
+	 width: auto; 
+	background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;
+}
+div{
+	 text-align: center;
+	 background-color: white;
+	background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;
+}
+.flex-container1 {
+	 display: flex;
+	 background-color: white;
+	 width: auto;
+	 align-items: center;
+	 justify-content: center;
+	background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;
+}
+.flex-container1 > div {
+	 background-color: white;
+	 margin: 10px;
+	 padding: 20px;
+	 width: auto;
+	background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;
+}
+body {
+	 background: radial-gradient(circle at 3% 4.8%, rgb(169, 224, 127) 0%, rgb(248, 247, 121) 86.6%);;
+}</style>
+<body>
+<div id="elem1" class="topnav">
+<a class="active" href="#Lorem Ipsum1">Lorem Ipsum1</a>
+<a href="#Lorem Ipsum2">Lorem Ipsum2</a>
+</div><br>
+<div>
+<h1 id="elem2">The Header for this section</h1><div class="flex-container" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><p id="elem13" >Lorem ipsum dolor sit amet, ea vocent deserunt postulant nec.<br> Mea id iriure probatus, sit unum clita mandamus ex.<br> Duo zril facilisi expetendis eu, in sea omnes torquatos.<br> Ne deseruisse deterruisset pri, per nostro constituam ut.<br> Est ex natum impedit, ei duo graeci deserunt.<br> Affert recusabonepro.</p></div><div><img id="elem11" src="/media/cyberpunk.jpg" alt="Your Image"></div></div>
+</div><div>
+<h1 id="elem3">The Header for this section</h1><div class="flex-container" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><p id="elem14" >Lorem ipsum dolor sit amet, ea vocent deserunt postulant nec.<br> Mea id iriure probatus, sit unum clita mandamus ex.<br> Duo zril facilisi expetendis eu, in sea omnes torquatos.<br> Ne deseruisse deterruisset pri, per nostro constituam ut.<br> Est ex natum impedit, ei duo graeci deserunt.<br> Affert recusabonepro.</p></div><div><img id="elem12" src="/media/cyberpunk.jpg" alt="Your Image"></div></div>
+</div><div><h1 id="elemelem0">This is Your Form!!</h1><div><div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elemelem1" for="Lorem Ipsum">This is the label for your dropdown:</label></div><div><select name= "Lorem Ipsum" id="elem8"><option value="Dropdown1">Dropdown1</option><option value="Dropdown2">Dropdown2</option><option value="Dropdown3">Dropdown3</option></select></div></div></div><div><div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elemelem2" for="Lorem Ipsum">This is the label for your dropdown:</label></div><div><select name= "Lorem Ipsum" id="elem9"><option value="Dropdown1">Dropdown1</option><option value="Dropdown2">Dropdown2</option><option value="Dropdown3">Dropdown3</option></select></div></div></div><div><div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elemelem3" for="Lorem Ipsum">This is the label for your textbox:</label></div><div><input id="elem15" type="text" name="text box" placeholder="Place Your text Here"></div></div></div><div><div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elemelem4" for="Lorem Ipsum">This is the label for your textbox:</label></div><div><input id="elem16" type="text" name="text box" placeholder="Place Your text Here"></div></div></div><div><div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elemelem5" for="Lorem Ipsum">This is the label for your textbox:</label></div><div><input id="elem17" type="text" name="text box" placeholder="Place Your text Here"></div></div></div><div><div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elemelem6" for="Lorem Ipsum">This is the label for your textarea:</label></div><div><textarea id="elem18" name="text area" rows="4" cols="50" placeholder="Place Your text Here"></textarea></div></div></div><div><div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elemelem7" for="Lorem Ipsum">This is the label for your textarea:</label></div><div><textarea id="elem19" name="text area" rows="4" cols="50" placeholder="Place Your text Here"></textarea></div></div></div><div><label id="elemelem8" for="Lorem Ipsum">This is the label for your checkboxes:</label><br>
+<div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><label id="elem6"><input type="checkbox">CheckBox</label></div><div><label id="elem7"><input type="checkbox">CheckBox</label></div></div></div>
+<div><div class="flex-container1" style="background: url(https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38) no-repeat center/ cover;"><div><button class="button" id="elem4">Button</button></div><div><button class="button" id="elem5">Button</button></div><div></div>
+</div>
+<footer id="elem10">Footer</footer></body>
+</html>

@@ -1,0 +1,93 @@
+option {
+	width: auto;
+	height: auto;
+	background: rgb(224, 222, 222);
+	padding: 10px;
+	border: medium none;
+	outline: none;
+	border-radius: 5px;
+}
+
+input[type='text'] {
+	width: auto;
+	height: auto;
+	background: rgb(224, 222, 222);
+	padding: 10px;
+	border: medium none;
+	outline: none;
+	border-radius: 5px;
+}
+
+.Background_purpose {
+    display: flex;
+	justify-content: center;
+	margin-top: 1%;
+	margin-bottom: 1%;
+    width: 100%;
+}
+
+.purpose_box {
+	margin-top: 4%;
+	padding: 30px;
+	width: 40%;
+	height: auto;
+	overflow: hidden;
+	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+
+.purpose_header {
+	font-size: x-large;
+	font-weight: bold;
+	padding: 5px 50px 0 0;
+	color: white;
+}
+
+.purpose_field_row {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 50px;
+}
+
+.purpose_field_column {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 50px;
+}
+
+.page_option {
+	font-size: larger;
+	font-weight: bold;
+	padding-right: 10px;
+	color: white;
+}
+
+#purpose_txtbox::placeholder {
+	font-size: 20px;
+}
+
+.choice_button {
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #8a3b3b;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+
+.choice_button:hover{
+	background: #b84444;
+}
+
+
+
